@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets"
+ >
+<h:head>
+    	<h:outputStylesheet library="css" name="table-style.css"  />
+</h:head>
+     <h:body>
+ 		<h:dataTable value="#{reportBean.getReportList()}" var="report"
+    			styleClass="order-table"
+    			headerClass="order-table-header"
+    			rowClasses="order-table-odd-row,order-table-even-row"
+    		>
+
+    		<h:column>
+    			<f:facet name="header">
+    				ISP
+    			</f:facet>
+    				#{report.isp}
+    		</h:column>
+
+    		<h:column>
+    			<f:facet name="header">
+    				FNN Number
+				</f:facet>
+    				#{report.fnnNumber}
+    		</h:column>
+
+ 			<h:column>
+    			<f:facet name="header">
+    				Peak Bandwidth (Kbps)
+				</f:facet>
+    				#{report.peakBandwidthKBPS}
+    		</h:column>
+
+    		<h:column>
+    			<f:facet name="header">
+    				Network SID (Count)
+				</f:facet>
+    				#{report.networkSIDCount}
+    		</h:column>
+    		
+    		<h:column>
+    			<f:facet name="header">
+    				Kbps / SIO
+				</f:facet>
+    				#{report.kbpsOrSIO}
+    		</h:column>
+    		
+    		<h:column>
+    			<f:facet name="header">
+    				Current Tier
+				</f:facet>
+    				#{report.currentTier}
+    		</h:column>
+    		
+    		<h:column>
+    			<f:facet name="header">
+    				Last Month Tier
+				</f:facet>
+    				#{report.lastMonthTier}
+    		</h:column>
+
+    	</h:dataTable>
+
+    </h:body>
+
+</html>

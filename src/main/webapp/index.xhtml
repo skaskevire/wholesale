@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich">
+<h:head>
+	<h:outputStylesheet library="css" name="table-style.css" />
+</h:head>
+<h:body>
+	<h:form id="form">
+
+		<rich:togglePanel id="panel1" activeItem="item1" render="tabs">
+			<rich:togglePanelItem name="item1">
+				<rich:dataTable var="report" value="#{reportBean.getReportList()}">
+					<rich:column>
+						<f:facet name="header">
+							<h:outputText value="ISP" />
+						</f:facet>
+						<h:outputText value="#{report.isp}" />
+					</rich:column>
+					<rich:column>
+						<f:facet name="header">
+							<h:outputText value="FNN Number" />
+						</f:facet>
+						<h:outputText value="#{report.fnnNumber}" />
+					</rich:column>
+					<rich:column>
+						<f:facet name="header">
+							<h:outputText value="Peak Bandwidth (Kbps)" />
+						</f:facet>
+						<h:outputText value="#{report.peakBandwidthKBPS}" />
+					</rich:column>
+					<rich:column>
+						<f:facet name="header">
+							<h:outputText value="Network SID (Count)" />
+						</f:facet>
+						<h:outputText value="#{report.networkSIDCount}" />
+					</rich:column>
+					<rich:column>
+						<f:facet name="header">
+							<h:outputText value="Kbps / SIO" />
+						</f:facet>
+						<h:outputText value="#{report.kbpsOrSIO}" />
+					</rich:column>
+					<rich:column>
+						<f:facet name="header">
+							<h:outputText value="Current Tier" />
+						</f:facet>
+						<h:outputText value="#{report.currentTier}" />
+					</rich:column>
+					<rich:column>
+						<f:facet name="header">
+							<h:outputText value="Last Month Tier" />
+						</f:facet>
+						<h:outputText value="#{report.lastMonthTier}" />
+					</rich:column>
+				</rich:dataTable>
+			</rich:togglePanelItem>
+			<rich:togglePanelItem name="item2">
+				<rich:dataTable var="report" value="#{reportBean.getReportList()}">
+					<rich:column>
+						<f:facet name="header">
+							<h:outputText value="ISP" />
+						</f:facet>
+						<h:outputText value="#{report.isp}" />
+					</rich:column>
+					<rich:column>
+						<f:facet name="header">
+							<h:outputText value="FNN Number" />
+						</f:facet>
+						<h:outputText value="#{report.fnnNumber}" />
+					</rich:column>
+					<rich:column>
+						<f:facet name="header">
+							<h:outputText value="Peak Bandwidth (Kbps)" />
+						</f:facet>
+						<h:outputText value="#{report.peakBandwidthKBPS}" />
+					</rich:column>
+					<rich:column>
+						<f:facet name="header">
+							<h:outputText value="Network SID (Count)" />
+						</f:facet>
+						<h:outputText value="#{report.networkSIDCount}" />
+					</rich:column>
+					<rich:column>
+						<f:facet name="header">
+							<h:outputText value="Kbps / SIO" />
+						</f:facet>
+						<h:outputText value="#{report.kbpsOrSIO}" />
+					</rich:column>
+					<rich:column>
+						<f:facet name="header">
+							<h:outputText value="Current Tier" />
+						</f:facet>
+						<h:outputText value="#{report.currentTier}" />
+					</rich:column>
+					<rich:column>
+						<f:facet name="header">
+							<h:outputText value="Last Month Tier" />
+						</f:facet>
+						<h:outputText value="#{report.lastMonthTier}" />
+					</rich:column>
+				</rich:dataTable>
+			</rich:togglePanelItem>
+		</rich:togglePanel>
+		<a4j:outputPanel id="tabs" layout="block">
+			<a4j:outputPanel layout="block" styleClass="tabDiv">
+				<rich:toggleControl event="click" targetPanel="panel1"
+					targetItem="item1" />
+				<h:outputText value="NBN National APHT"
+					style="#{rich:findComponent('panel1').activeItem == 'item1' ? 'font-weight:bold' : 'font-weight:normal'}" />
+			</a4j:outputPanel>
+			<a4j:outputPanel layout="block" styleClass="tabDiv">
+				<rich:toggleControl event="click" targetPanel="panel1"
+					targetItem="item2" />
+				<h:outputText value="DSL National APHT"
+					style="#{rich:findComponent('panel1').activeItem == 'item2' ? 'font-weight:bold' : 'font-weight:normal'}" />
+			</a4j:outputPanel>
+		</a4j:outputPanel>
+
+	</h:form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</h:body>
+
+</html>

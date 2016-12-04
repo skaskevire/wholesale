@@ -13,7 +13,8 @@
 
 				<rich:tabPanel switchType="client">
 					<rich:tab header="#{msg['menu.table.company.nbn']}">
-						<rich:dataTable id="reportDatatable" var="report" value="#{reportBean.getReportList()}" rowClasses="odd-row, even-row">
+						<rich:dataTable id="reportDatatable" captionClass="reportDatatable" var="report" value="#{reportBean.getReportListNBN()}"  rowClasses="odd-row, even-row">
+							
 							<rich:column>
 								<f:facet name="header">
 									<h:outputText value="#{msg['menu.table.isp']}" />
@@ -59,7 +60,7 @@
 						</rich:dataTable>
 					</rich:tab>
 					<rich:tab header="#{msg['menu.table.company.dsl']}">
-						<rich:dataTable var="report" value="#{reportBean.getReportList()}">
+						<rich:dataTable captionClass="reportDatatable" var="report" value="#{reportBean.getReportListDSL()}">
 							<rich:column>
 								<f:facet name="header">
 									<h:outputText value="#{msg['menu.table.isp']}" />

@@ -1,37 +1,25 @@
 $(document).ready(function() {
-	$(".menuInput").click(function() {
-		var actionName = this.id;
-		actionName = "/project/" + actionName;
-		$("#body").load(actionName);
-	});
-	$("#seanceList").click(function() {
-		var date = document.getElementById("dateString").value;
-		var pattern = /^[12][90][0-9][0-9]\-[01]?[0-9]\-[0-3]?[0-9]$/;
-		if (!pattern.test(date)) {
-			alert("Invalid format of date! It must be yyyy-mm-dd");
-			return;
+	paintColumns();
+	
+	
+	
+	$("#logoutButton").on("click", function() {
+		if (confirm("Do you really want to log out?")) {
+			open(location, '_self').close();
 		}
-		$("#body").load("/project/seanceList", {
-			dateString : date
-		});
+
+	});
+	$("#dropdownmenu").on("click", function(f) {
+		var selectedItem = $(f.target).text();
+		if( selectedItem != "Menu")
+		{
+			$("span#show").text(selectedItem + " selected!");
+		}	
 	});
 });
 
-function deleteReservation(id) {
-	$("#body").load("/project/deleteReservation", {
-		id : id
-	});
-}
 
-function registerSeance(name, date) {
-	var userName = document.getElementById("usrName").value;
-	var requestBody = {
-		seanceName : name,
-		date : date,
-		userName : userName
-	};
-	alert(JSON.stringify(requestBody));
-	$("#body").load("/project/saveReservation", requestBody, function() {
-		alert("done");
-	});
+function paintColumns()
+{
+	$("reportDatatable).text();
 }

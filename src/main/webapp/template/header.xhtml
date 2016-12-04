@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich">
+<body>
+	<ui:composition>
+
+		<div class="divTable">
+			<div class="divTableBody">
+				<div class="divTableRow">
+					<div class="divTableCell" id="header-logo">
+						<div class="header-logo">
+							<h:graphicImage library="images" name="wholesale.png"
+								style="float:left" />
+						</div>
+					</div>
+					<div class="divTableCell" id="header-link-text"></div>
+					<div class="divTableCell" id="header-link">
+						<h:form>Welcome Raman Skaskevich |<a href="#" id="logoutButton">Logout</a>
+						</h:form>
+					</div>
+				</div>
+				<div class="divTableRow">
+					<div class="divTableCell" id="menu-home">
+						<a4j:commandButton value="Home" id="menu-button-home" />
+					</div>
+					<div class="divTableCell" id="menu-dropdown">
+							<span id="show" style="color:red;"></span>
+					</div>
+					<div class="divTableCell" id="menu-back">
+					<a4j:commandButton value="Back" id="menu-button-back" />
+												<h:panelGrid columns="2" columnClasses="cols,cols" width="400">
+							<rich:panelMenu id="dropdownmenu" style="width:200px" 
+								groupExpandedLeftIcon="triangleUp"
+								groupCollapsedLeftIcon="triangleDown"
+								topGroupExpandedRightIcon="chevronUp"
+								topGroupCollapsedRightIcon="chevronDown" itemLeftIcon="disc">
+								<rich:panelMenuGroup label="Menu">
+									<rich:panelMenuItem label="NBN ISP Report" name="nbnIspReport" />
+									<rich:panelMenuItem label="DSL ISP Report" name="dslIspReport" />
+									<rich:panelMenuItem label="Configuration" name="configuration" />
+								</rich:panelMenuGroup>
+							</rich:panelMenu>
+						</h:panelGrid>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="header">
+
+			<div class="header-link"></div>
+		</div>
+		<div class="menu">
+			<div class="menu-home"></div>
+			<div class="menu-dropdown"></div>
+			<div class="menu-back"></div>
+		</div>
+
+
+
+
+
+
+
+
+	</ui:composition>
+</body>
+
+</html>

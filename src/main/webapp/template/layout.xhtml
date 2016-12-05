@@ -10,7 +10,7 @@
 
 <f:loadBundle basename="messages" var="msg" />
 <h:head>
-	
+
 </h:head>
 <h:body>
 	<h:outputStylesheet library="css" name="table-style.css" />
@@ -18,13 +18,12 @@
 	<h:outputScript library="js" name="jquery.js" />
 	<div id="page">
 
-		<div id="header">
+		<div id="header" class="header">
 			<ui:insert name="header">
 				<ui:include src="/template/header.xhtml" />
 			</ui:insert>
 		</div>
-		<rich:panel header="ISP National APHT Report: {0}"
-			id="mainPanel">
+		<rich:panel header="#{msg['content.panel']}" id="mainPanel">
 
 			<div id="content">
 				<ui:insert name="content">

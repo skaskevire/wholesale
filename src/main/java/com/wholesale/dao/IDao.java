@@ -53,5 +53,12 @@ public interface IDao<T, K> {
 	 * */
 	List<T> readAll();
 	
+	/**
+	 * 
+	 * reads all entities by param
+	 * 
+	 * @return T entity
+	 * 
+	 * */
 	List<T> readByParam(String paramName, String paramValue);
 }

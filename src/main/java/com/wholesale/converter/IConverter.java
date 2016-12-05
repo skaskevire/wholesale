@@ -3,7 +3,7 @@ package com.wholesale.converter;
 /**
  * Converter between dao layer objects and business logic objects
  * 
- * @author Raman_Skaskevich@epam.com
+ * @author Raman_Skaskevich
  * */
 public interface IConverter<T, K> {
 	

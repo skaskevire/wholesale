@@ -5,6 +5,11 @@ import com.wholesale.converter.IConverter;
 import com.wholesale.dao.entity.ReportDO;
 import com.wholesale.service.entity.Report;
 
+/**
+ * Implementation of {@link IReportConverter}
+ * 
+ * @author Raman_Skaskevich
+ * */
 public class ReportDOConverter implements IConverter<ReportDO, Report>
 {
 

@@ -10,7 +10,7 @@ import com.wholesale.service.IGenericService;
 /**
  * Implementation of {@IGenericService}
  * 
- * @author Raman_Skaskevich@epam.com
+ * @author Raman_Skaskevich
  * 
  * */
 public class GenericService<E, EDO, K>  implements IGenericService<E,EDO, K> {

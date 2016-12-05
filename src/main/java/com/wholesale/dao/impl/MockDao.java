@@ -11,7 +11,7 @@ import com.wholesale.dao.entity.ReportDO;
 /**
  * Implementation of {@IDao}
  * 
- * @author Raman_Skaskevich@epam.com
+ * @author Raman_Skaskevich
  */
 
 public class MockDao implements IDao<ReportDO, Integer>
@@ -21,17 +21,18 @@ public class MockDao implements IDao<ReportDO, Integer>
 	{
 	}
 
+
 	@Override
 	public void update(ReportDO entity)
 	{
 	}
+
 
 	@Override
 	public void delete(ReportDO entity)
 	{
 	}
 
-	/** {@inheritDoc}} */
 	@Override
 	public ReportDO read(Integer id)
 	{

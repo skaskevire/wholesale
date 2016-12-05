@@ -8,9 +8,16 @@ import com.wholesale.dao.entity.ReportDO;
 import com.wholesale.service.IReportService;
 import com.wholesale.service.entity.Report;
 
+/**
+ * Implementation of {@IReportService}
+ * 
+ * @author Raman_Skaskevich
+ * 
+ * */
 public class ReportService extends GenericService<Report, ReportDO, Integer>
 		implements IReportService
 {
+	/**{@InheritDoc}*/
 	@Override
 	public List<Report> readByCompanyName(String companyName)
 	{

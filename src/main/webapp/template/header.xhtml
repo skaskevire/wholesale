@@ -10,32 +10,35 @@
 <body>
 	<ui:composition>
 
-		<div class="divTable">
-			<div class="divTableBody">
-				<div class="divTableRow">
-					<div class="divTableCell" id="header-logo">
+		<div class="headerTable">
+			<div class="headerTableBody">
+				<div class="headerTableRow">
+					<div id="header-logo">
 						<div class="header-logo">
 							<h:graphicImage library="images" name="wholesale.png"
 								style="float:left" />
 						</div>
 					</div>
-					<div class="divTableCell" id="header-link-text"></div>
-					<div class="divTableCell" id="header-link">
-						<h:form>Welcome Raman Skaskevich |<a href="#" id="logoutButton">Logout</a>
+					<div id="header-link-text"></div>
+					<div id="header-link">
+						<h:form>#{msg['header.message.welcome']} Raman Skaskevich |<a
+								href="#" id="logoutButton">#{msg['header.button.logout']}</a>
 						</h:form>
 					</div>
 				</div>
-				<div class="divTableRow">
-					<div class="divTableCell" id="menu-home">
-						<a4j:commandButton value="Home" id="menu-button-home" />
+				<div class="headerTableRow">
+					<div id="menu-home">
+						<a4j:commandButton value="#{msg['header.button.home']}"
+							id="menu-button-home" />
 					</div>
-					<div class="divTableCell" id="menu-dropdown">
-							<span id="show" style="color:red;"></span>
+					<div id="menu-dropdown">
+						<span id="show" style="color: red;"></span>
 					</div>
-					<div class="divTableCell" id="menu-back">
-					<a4j:commandButton value="Back" id="menu-button-back" />
-												<h:panelGrid columns="2" columnClasses="cols,cols" width="400">
-							<rich:panelMenu id="dropdownmenu" style="width:200px" 
+					<div id="menu-back">
+						<a4j:commandButton value="#{msg['header.button.back']}"
+							id="menu-button-back" />
+						<h:panelGrid columns="2" columnClasses="cols,cols" width="400">
+							<rich:panelMenu id="dropdownmenu" style="width:200px"
 								groupExpandedLeftIcon="triangleUp"
 								groupCollapsedLeftIcon="triangleDown"
 								topGroupExpandedRightIcon="chevronUp"
@@ -47,31 +50,11 @@
 								</rich:panelMenuGroup>
 							</rich:panelMenu>
 						</h:panelGrid>
-						
+
 					</div>
 				</div>
 			</div>
 		</div>
-
-
-
-		<div class="header">
-
-			<div class="header-link"></div>
-		</div>
-		<div class="menu">
-			<div class="menu-home"></div>
-			<div class="menu-dropdown"></div>
-			<div class="menu-back"></div>
-		</div>
-
-
-
-
-
-
-
-
 	</ui:composition>
 </body>
 

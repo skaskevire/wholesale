@@ -4,9 +4,9 @@ import java.util.List;
 
 /**
  * Performs calls to dao layer, entity conversion.
- *  Buffer between dao layer and actions
+ *  Buffer between dao layer and beans
  * 
- * @author Raman_Skaskevich@epam.com
+ * @author Raman_Skaskevich
  * */
 public interface IGenericService<E, EDO, K> {
 	/**

@@ -12,94 +12,94 @@
 		<ui:define name="content">
 
 				<rich:tabPanel switchType="client">
-					<rich:tab header="#{msg['menu.table.company.nbn']}">
+					<rich:tab header="#{msg['content.table.company.nbn']}">
 						<rich:dataTable id="reportDatatable" captionClass="reportDatatable" var="report" value="#{reportBean.getReportListNBN()}"  rowClasses="odd-row, even-row">
 							
 							<rich:column>
 								<f:facet name="header">
-									<h:outputText value="#{msg['menu.table.isp']}" />
+									<h:outputText value="#{msg['content.table.isp']}" />
 								</f:facet>
 								<h:outputText value="#{report.isp}" />
 							</rich:column>
 							<rich:column>
 								<f:facet name="header">
-									<h:outputText value="#{msg['menu.table.fnn.number']}" />
+									<h:outputText value="#{msg['content.table.fnn.number']}" />
 								</f:facet>
 								<h:outputText value="#{report.fnnNumber}" />
 							</rich:column>
 							<rich:column>
 								<f:facet name="header">
-									<h:outputText value="#{msg['menu.table.peak.bandwidth']}" />
+									<h:outputText value="#{msg['content.table.peak.bandwidth']}" />
 								</f:facet>
 								<h:outputText value="#{report.peakBandwidthKBPS}" />
 							</rich:column>
 							<rich:column>
 								<f:facet name="header">
-									<h:outputText value="#{msg['menu.table.network.sid']}" />
+									<h:outputText value="#{msg['content.table.network.sid']}" />
 								</f:facet>
 								<h:outputText value="#{report.networkSIDCount}" />
 							</rich:column>
 							<rich:column>
 								<f:facet name="header">
-									<h:outputText value="#{msg['menu.table.kbps']}" />
+									<h:outputText value="#{msg['content.table.kbps']}" />
 								</f:facet>
 								<h:outputText value="#{report.kbpsOrSIO}" />
 							</rich:column>
 							<rich:column>
 								<f:facet name="header">
-									<h:outputText value="#{msg['menu.table.current.tier']}" />
+									<h:outputText value="#{msg['content.table.current.tier']}" />
 								</f:facet>
 								<h:outputText value="#{report.currentTier}" />
 							</rich:column>
 							<rich:column>
 								<f:facet name="header">
-									<h:outputText value="#{msg['menu.table.last.month.tier']}" />
+									<h:outputText value="#{msg['content.table.last.month.tier']}" />
 								</f:facet>
 								<h:outputText value="#{report.lastMonthTier}" />
 							</rich:column>
 						</rich:dataTable>
 					</rich:tab>
-					<rich:tab header="#{msg['menu.table.company.dsl']}">
-						<rich:dataTable captionClass="reportDatatable" var="report" value="#{reportBean.getReportListDSL()}">
+					<rich:tab header="#{msg['content.table.company.dsl']}">
+						<rich:dataTable captionClass="reportDatatable" var="report" value="#{reportBean.getReportListDSL()}" rowClasses="odd-row, even-row>
 							<rich:column>
 								<f:facet name="header">
-									<h:outputText value="#{msg['menu.table.isp']}" />
+									<h:outputText value="#{msg['content.table.isp']}" />
 								</f:facet>
 								<h:outputText value="#{report.isp}" />
 							</rich:column>
 							<rich:column>
 								<f:facet name="header">
-									<h:outputText value="#{msg['menu.table.fnn.number']}" />
+									<h:outputText value="#{msg['content.table.fnn.number']}" />
 								</f:facet>
 								<h:outputText value="#{report.fnnNumber}" />
 							</rich:column>
 							<rich:column>
 								<f:facet name="header">
-									<h:outputText value="#{msg['menu.table.peak.bandwidth']}" />
+									<h:outputText value="#{msg['content.table.peak.bandwidth']}" />
 								</f:facet>
 								<h:outputText value="#{report.peakBandwidthKBPS}" />
 							</rich:column>
 							<rich:column>
 								<f:facet name="header">
-									<h:outputText value="#{msg['menu.table.network.sid']}" />
+									<h:outputText value="#{msg['content.table.network.sid']}" />
 								</f:facet>
 								<h:outputText value="#{report.networkSIDCount}" />
 							</rich:column>
 							<rich:column>
 								<f:facet name="header">
-									<h:outputText value="#{msg['menu.table.kbps']}" />
+									<h:outputText value="#{msg['content.table.kbps']}" />
 								</f:facet>
 								<h:outputText value="#{report.kbpsOrSIO}" />
 							</rich:column>
 							<rich:column>
 								<f:facet name="header">
-									<h:outputText value="#{msg['menu.table.current.tier']}" />
+									<h:outputText value="#{msg['content.table.current.tier']}" />
 								</f:facet>
 								<h:outputText value="#{report.currentTier}" />
 							</rich:column>
 							<rich:column>
 								<f:facet name="header">
-									<h:outputText value="#{msg['menu.table.last.month.tier']}" />
+									<h:outputText value="#{msg['content.table.last.month.tier']}" />
 								</f:facet>
 								<h:outputText value="#{report.lastMonthTier}" />
 							</rich:column>

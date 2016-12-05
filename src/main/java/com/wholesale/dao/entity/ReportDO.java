@@ -1,5 +1,11 @@
 package com.wholesale.dao.entity;
 
+/**
+ * 
+ * Report Data object
+ *
+ * @author Raman Skaskevich
+ * */
 public class ReportDO
 {
 	private String isp;
